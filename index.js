@@ -18,7 +18,7 @@ function flashloop(){
       msg=msg.replace(/、/g , "、 ");
       msgs=msg.split(" ");
       for(var i=0;i<msgs.length-1;i++){
-         if(msgs[i].length>12){
+         if(msgs[i].length>10){
             halftext=msgs[i].substr(msgs[i].length-msgs[i].length/2);
             msgs[i]=msgs[i].substr(0,msgs[i].length-msgs[i].length/2);
             msgs.splice(i+1, 0, halftext);
