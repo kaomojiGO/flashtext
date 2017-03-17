@@ -9,5 +9,5 @@ function flash(){
       count=0;
    }
    document.getElementById("msgbox").innerHTML=msgs[count++];
-   setTimeout("flash()",2000);
+   setTimeout("flash()",flashspeed);
 }
