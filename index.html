@@ -5,7 +5,13 @@
   </head>
   <body>
     <p>Flash Text test page</p>
-    <div id="msgbox" align="center" style="font-size:25pt;";></div>
-    <input type="button" value="ON" onClick='changeMsg();'>
+    <div id="msgbox" align="center" style="font-size:25pt padding:10pt; margin-bottom:10pt; border:1pt solid #333333;";></div>
+    <select id="speed">
+      <option value="0.5s">500</option>
+      <option value="1s">1000</option>
+      <option value="2s">2000</option>
+      <option value="3s">3000</option>
+    </select>
+    <input type="button" value="GO!" onClick='flash();'>
   </body>
 </html>
