@@ -4,10 +4,10 @@ var count=0;
 var flashspeed
    
 function flash(){
-   flashspeed=document.getElementById('speed').value;
+   flashspeed=document.getElementById("speed").value;
    if(count > msgs.length-1){
       count=0;
    }
-   document.getElementById("msgbox").innerHTML=msgs[i++];
+   document.getElementById("msgbox").innerHTML=msgs[count++];
    setTimeout("flash()",flashspeed);
 }
