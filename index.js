@@ -1,7 +1,7 @@
 var msg="一定間隔で,文字が,変更されていますか？";
 var msgs=msg.split(",");
 var count=0;
-var flashspeed
+var flashspeed;
    
 function flash(){
    flashspeed=document.getElementById("speed").value;
@@ -9,5 +9,5 @@ function flash(){
       count=0;
    }
    document.getElementById("msgbox").innerHTML=msgs[count++];
-   setTimeout("flash()",flashspeed);
+   setTimeout("flash()",2000);
 }
