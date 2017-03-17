@@ -5,22 +5,24 @@
   </head>
   <body>
     <p>Flash Text test</p>
-    <hr>
+    <hr><br>
     <div id="msgbox" align="center" style="font-size:25pt";></div>
-    <hr>
-    <select id="speed">
-      <option value="500">5s</option>
-      <option value="1000">1s</option>
-      <option value="2000">2s</option>
-      <option value="3000">3s</option>
-    </select>
+    <br><hr>
     
     <textarea id="text" rows="10" cols="40">
       吾輩は猫である。
       名前はまだ無い。
       どこで生れたかとんと見当がつかぬ。
       何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-    </textarea>
+    </textarea><br>
+    
+    <select id="speed">
+      <option value="500">0.5s</option>
+      <option value="1000">1s</option>
+      <option value="2000">2s</option>
+      <option value="3000">3s</option>
+    </select>
+    
     <input type="button" value="GO!" onClick='flash();'>
   </body>
 </html>
