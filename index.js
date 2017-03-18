@@ -3,7 +3,8 @@ var msgs;
 var count=0;
 var flashspeed;
 var runcheck=0;
-var halftext
+var halftext;
+var cut;
    
 function flash(){
    document.getElementById("msgbox").innerHTML=msgs[count++];
@@ -13,18 +14,26 @@ function flashloop(){
    if(runcheck==0){
       runcheck=1;
       flashspeed=document.getElementById("speed").value;
+      cut=document.getElementById("cutsize").value;
       msg=document.getElementById("text").value;
       msg=msg.replace(/。/g , "。 ");
-      msg=msg.replace(/、/g , "、 ");
-      msgs=msg.split(" ");
+      msg=msg.replace(/、/g , " ");
+      msg=msg.replace(/と/g , "と ");
+      msg=msg.replace(/に/g , "に ");
+      msg=msg.replace(/の/g , "の ");
+      msg=msg.replace(/は/g , "は ");
+      msg=msg.replace(/が/g , "が ");
+      msg=msg.replace(/で/g , "で ");
+      msg=msg.replace(/を/g , "を ");
+      msgs=msg.split(/\s+/g);
       for(var i=0;i<msgs.length-1;i++){
-         if(msgs[i].length>10){
+         if(msgs[i].length>cut){
             halftext=msgs[i].substr(msgs[i].length-msgs[i].length/2);
             msgs[i]=msgs[i].substr(0,msgs[i].length-msgs[i].length/2);
             msgs.splice(i+1, 0, halftext);
          }
       }
-            
+
       for(var i=0;i<msgs.length-1;i++){
          setTimeout("flash()",flashspeed*i);
       }
@@ -37,4 +46,3 @@ function release(){
    document.getElementById("msgbox").innerHTML="おしまい";
    runcheck=0;
 }
-
